@@ -1,4 +1,4 @@
-http://www.jlai.ca
+http://beta.jlai.ca
 =================
 
-Homepage
+Homepage (beta)
