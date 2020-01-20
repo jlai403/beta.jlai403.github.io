@@ -23,6 +23,7 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         TEST_VAR: ${{ secrets.TEST_VAR }}
         BRANCH: gh-pages
         FOLDER: build
