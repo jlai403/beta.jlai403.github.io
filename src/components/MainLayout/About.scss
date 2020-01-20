@@ -1,0 +1,50 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+#about {
+
+  font-family: 'Questrial', sans-serif;
+
+  .container {
+    max-width: 100%;
+    padding: 0 7.5rem;
+
+    .intro.row {
+      background: linear-gradient(to right, #00b96a, #c3eac7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      .hello {
+        font-size: 3rem;
+        font-family: 'Alex Brush';
+      }
+
+      .name {
+        margin-top: -1rem;
+        font-size: 7rem;
+        font-weight: 700;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      .title {
+        font-size: 5rem;
+        margin-top: -0.5rem;
+      }
+    }
+
+    .bio.row {
+      margin-top: 7rem;
+    }
+
+    .learn-more {
+      margin-top: 200px;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      text-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      color: #00b96a !important;
+    }
+  }
+}

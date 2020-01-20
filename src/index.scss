@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Open+Sans|Roboto+Condensed|Raleway|Questrial');
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "styles/variables/colors.scss";
+
+body,
+html,
+#root {
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Roboto Condensed', 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent !important;
+  font-weight: normal !important;
+
+  &:active,
+  &:hover,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    background-color: transparent !important;
+    font-weight: normal !important;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    font-family: 'Roboto Condensed';
+    font-size: 1.5rem;
+    font-weight: 700 !important;
+    color: #354b60;
+    text-transform: uppercase;
+    background-color: transparent !important;
+
+    &:hover {
+      text-decoration: none;
+      transition: color 1s ease;
+      color: #e74c3c !important;
+    }
+
+    &:active,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-family: 'Roboto Condensed';
+      font-size: 1.5rem !important;
+      font-weight: 700 !important;
+      color: #354b60;
+      text-transform: uppercase;
+      background-color: transparent !important;
+    }
+  }
+}
+
+.center.text {
+  text-align: center;
+}
