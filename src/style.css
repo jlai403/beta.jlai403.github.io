@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Open+Sans|Roboto+Condensed|Raleway|Questrial');
+@import "tailwindcss";
+
+@theme {
+  --font-alex: "Alex Brush", cursive;
+  --font-questrial: "Questrial", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-roboto: "Roboto Condensed", "Avenir", "Open Sans", Helvetica, Arial, sans-serif;
+  
+  --color-green-primary: #00b96a;
+  --color-green-light: #c3eac7;
+  --color-navy: #354b60;
+  --color-red: #e74c3c;
+  --color-blue-bright: #00ade6;
+  --color-teal: #05e3d5;
+  --color-cyan: #43c6ac;
+  --color-light-cyan: #bdfff3;
+  --color-lightish-cyan: #e8f6f3;
+}
+
+body,
+html,
+#root {
+  @apply h-full w-full font-roboto antialiased text-[14px];
+}
+
+code {
+  @apply font-mono;
+}
+
+a {
+  @apply no-underline bg-transparent font-normal;
+}
+
+a:active,
+a:hover,
+a:link,
+a:visited {
+  @apply no-underline bg-transparent font-normal;
+}
+
+@theme {
+  --animate-bouncing: bouncing 2s infinite;
+  --animate-bouncing-horizontal: bouncingHorizontal 1.5s infinite;
+  --animate-fade-in-fast: fadeIn 0.5s infinite;
+  --animate-fade-in-1s: fadeIn 1s ease-out;
+  --animate-fade-in-2s: fadeIn 2s ease-out;
+  --animate-fade-in-4s: fadeIn 4s ease-out;
+  --animate-fade-in-6s: fadeIn 6s ease-out;
+  --animate-slide-in-left: slideInLeft 1s ease-out;
+  --animate-slide-in-right: slideInRight 1s ease-out;
+  --animate-slide-in-bottom: slideInBottom 1s ease-out;
+}
+
+@keyframes bouncing {
+  0% { transform: translateY(0%); }
+  50% { transform: translateY(30%); }
+  100% { transform: translateY(0%); }
+}
+
+@keyframes bouncingHorizontal {
+  0% { transform: translateX(0%); }
+  50% { transform: translateX(10%); }
+  100% { transform: translateX(0%); }
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-200px); }
+  100% { opacity: 1; transform: translateX(0px); }
+}
+
+@keyframes slideInRight {
+  0% { opacity: 0; transform: translateX(100%); }
+  100% { opacity: 1; transform: translateX(0%); }
+}
+
+@keyframes slideInBottom {
+  0% { opacity: 0; transform: translateY(75%); }
+  100% { opacity: 1; transform: translateY(0%); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.bouncing { @apply animate-bouncing; }
+.horizontal.bouncing { @apply animate-bouncing-horizontal; }
+.fadeInFast { @apply animate-fade-in-fast; }
+.slideInLeft { @apply animate-slide-in-left; }
+.slideInRight { @apply animate-slide-in-right; }
+.slideInBottom { @apply animate-slide-in-bottom; }
+.fadeIn.one { @apply animate-fade-in-1s; }
+.fadeIn.two { @apply animate-fade-in-2s; }
+.fadeIn.four { @apply animate-fade-in-4s; }
+.fadeIn.six { @apply animate-fade-in-6s; }
+
+
+@theme {
+  --color-facebook: #3b5998;
+  --color-linkedin: #007bb6;
+  --color-github: #333333;
+  --color-stackoverflow: #f48024;
+  --color-stackoverflow-bg: #222222;
+  --color-instagram-bg: #517fa4;
+  --color-twitter: #00aced;
+  --color-google-plus: #dd4b39;
+  --color-pinterest: #cb2027;
+}
+
+.nav-link {
+  @apply no-underline font-roboto text-[15px] !font-bold text-navy uppercase bg-transparent;
+}
+
+.nav-link:hover {
+  @apply text-red transition-colors duration-1000 ease-in no-underline;
+}
+
+.nav-link:active,
+.nav-link:link,
+.nav-link:visited {
+  @apply no-underline font-roboto text-[15px] !font-bold text-navy uppercase bg-transparent;
+}
+
+.center.text {
+  @apply text-center;
+}
+
+.social-icon {
+  @apply no-underline inline-flex items-center justify-center h-[30px] w-[30px] rounded-lg mx-[2px];
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  transition: color 0.5s ease, background-color 0.5s ease, transform 2s ease;
+  transform: translate(0, -2px);
+}
