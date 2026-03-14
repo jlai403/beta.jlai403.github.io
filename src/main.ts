@@ -16,6 +16,12 @@ const router = createRouter({
   routes,
 })
 
+router.afterEach((to) => {
+  const baseTitle = 'joey lai'
+  const pageTitle = to.path === '/stack' ? 'stack' : 'software developer'
+  document.title = `${baseTitle} • ${pageTitle}`
+})
+
 const app = createApp(App)
 app.use(router)
 app.mount('#root')
