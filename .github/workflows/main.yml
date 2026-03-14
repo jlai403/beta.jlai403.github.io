@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+
 jobs:
   build:
 
@@ -13,7 +16,12 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
 
     - name: Build
       run: |
@@ -21,9 +29,10 @@ jobs:
         npm run-script build
 
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        ACCESS_TOKEN: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
+        token: ${{ secrets.DEPLOY_ACCESS_TOKEN }}
+        branch: gh-pages
+        folder: dist
+      env:
         TEST_VAR: ${{ secrets.TEST_VAR }}
-        BRANCH: gh-pages
-        FOLDER: build
