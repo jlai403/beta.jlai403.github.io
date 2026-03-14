@@ -1,17 +1,16 @@
 <template>
-  <div id="layout" class="fadeIn one">
-    <div class="container wrapper">
-      <nav class="navbar">
-        <div class="nav-links">
-          <div class="col-xs-2"></div>
-          <router-link to="/" class="nav-link" active-class="active">home</router-link>
-          <a href="#about" class="nav-link" :class="{ active: currentHash === '#about' }">about</a>
-          <a href="#skills" class="nav-link" :class="{ active: currentHash === '#skills' }">skills</a>
-          <a href="#projects" class="nav-link" :class="{ active: currentHash === '#projects' }">projects</a>
-          <a href="#contact" class="nav-link" :class="{ active: currentHash === '#contact' }">contact</a>
+  <div id="layout" class="animate-fade-in-1s w-full bg-[#43c6ac] bg-gradient-to-b from-[#e8f6f3] to-[#bdfff3] min-h-screen">
+    <div class="w-full h-[calc(100%-9rem)] relative">
+      <nav class="flex flex-row fixed left-0 w-full h-[50px] m-0 px-4 border-0 z-50">
+        <div class="w-full sm:ml-auto flex h-[50px] justify-end space-x-4 sm:space-x-8 lg:space-x-12 px-4 sm:px-12 items-center">
+          <router-link to="/" class="nav-link py-4 !text-[15px] inline-block text-center border-t-[3px] border-transparent hover:!border-[#00ade6]" active-class="!border-[#00ade6] [border-image:linear-gradient(180deg,#00ade6_0,#05e3d5)_2]">home</router-link>
+          <a href="#about" class="nav-link py-4 !text-[15px] inline-block text-center border-t-[3px] hover:!border-[#00ade6]" :class="currentHash === '#about' ? '!border-[#00ade6] [border-image:linear-gradient(180deg,#00ade6_0,#05e3d5)_2]' : 'border-transparent'">about</a>
+          <a href="#skills" class="nav-link py-4 !text-[15px] inline-block text-center border-t-[3px] hover:!border-[#00ade6]" :class="currentHash === '#skills' ? '!border-[#00ade6] [border-image:linear-gradient(180deg,#00ade6_0,#05e3d5)_2]' : 'border-transparent'">skills</a>
+          <a href="#projects" class="nav-link py-4 !text-[15px] inline-block text-center border-t-[3px] hover:!border-[#00ade6]" :class="currentHash === '#projects' ? '!border-[#00ade6] [border-image:linear-gradient(180deg,#00ade6_0,#05e3d5)_2]' : 'border-transparent'">projects</a>
+          <a href="#contact" class="nav-link py-4 !text-[15px] inline-block text-center border-t-[3px] hover:!border-[#00ade6]" :class="currentHash === '#contact' ? '!border-[#00ade6] [border-image:linear-gradient(180deg,#00ade6_0,#05e3d5)_2]' : 'border-transparent'">contact</a>
         </div>
       </nav>
-      <div class="content">
+      <div class="min-w-[500px] my-[50px] mx-auto p-6">
         <div id="about" class="element">
           <About />
         </div>
@@ -26,7 +25,7 @@
         </div>
       </div>
     </div>
-    <footer class="footer"></footer>
+    <footer class="w-full"></footer>
   </div>
 </template>
 
@@ -37,7 +36,6 @@ import About from './About.vue'
 import Skills from './Skills.vue'
 import Projects from './Projects.vue'
 import Contact from './Contact.vue'
-import './MainLayout.scss'
 
 const route = useRoute()
 const currentHash = ref(route.hash)

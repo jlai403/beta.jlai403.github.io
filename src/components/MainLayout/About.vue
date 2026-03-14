@@ -1,22 +1,22 @@
 <template>
-  <div id="about" style="min-height: 100vh">
-    <div class="container">
-      <div class="intro row">
-        <div class="hello">Hello, my name is</div>
-        <div class="name">Joey Lai</div>
-        <div class="title">and I build products</div>
+  <div id="about" class="min-h-screen font-questrial">
+    <div class="w-full max-w-full px-[75px] mx-auto">
+      <div class="block -mx-[15px] bg-gradient-to-r from-[#00b96a] to-[#c3eac7] bg-clip-text text-transparent">
+        <div class="text-[30px] font-alex w-full">Hello, my name is</div>
+        <div class="text-[70px] font-bold font-raleway -mt-4 w-full">Joey Lai</div>
+        <div class="text-[50px] -mt-2 w-full">and I build products</div>
       </div>
 
-      <div class="bio row">
+      <div class="block -mx-[15px] mt-[70px]">
         <p>
           Good {{ state.currentTimeOfDay }}, <br/><br/>
           {{ state.weatherText }} in {{ state.city }}, {{ state.state }}
         </p>
       </div>
 
-      <div class="row">
-        <a href="#skills">
-          <div class="bouncing learn-more">
+      <div class="block -mx-[15px]">
+        <a href="#skills" class="no-underline">
+          <div class="animate-bouncing mt-[200px] w-max font-bold uppercase text-center !text-[#00b96a]">
             Learn More <br/>
             <i class="fa fa-chevron-down"></i>
           </div>
@@ -28,7 +28,6 @@
 
 <script setup lang="ts">
 import { reactive, onMounted } from 'vue'
-import './About.scss'
 
 async function getGeoData() {
   let response = await fetch('https://geolocation-db.com/json/')

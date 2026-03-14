@@ -1,38 +1,19 @@
 <template>
-  <div id="homepage" class="container-fluid flexbox hero-image">
-    <div class="blur"></div>
+  <div id="homepage" class="text-center text-[#2c3e50] flex items-center justify-center h-full w-full p-0 bg-[url('https://source.unsplash.com/featured/?zen')] bg-center bg-no-repeat bg-cover relative">
+    <div class="w-full h-[270px] max-w-[650px] -mt-10 absolute bg-[url('https://source.unsplash.com/featured/?zen')] bg-center bg-no-repeat bg-fixed bg-cover blur-[15px] overflow-hidden"></div>
 
-    <div class="content row-fluid">
-      <div class="main">
-        <h1 class="title">joey lai</h1>
-        <div class="sub-title">software developer & lifelong learner</div>
+    <div class="w-full border border-[#aaaaaa] -mt-20 max-w-[650px] p-16 text-center bg-white/50 relative z-10">
+      <div class="w-full relative">
+        <h1 class="w-full font-roboto text-[45px] uppercase text-[#333333]">joey lai</h1>
+        <div class="font-roboto text-[17.5px] mb-2.5 uppercase">software developer & lifelong learner</div>
       </div>
 
-      <div class="nav">
-        <div class="nav-links">
-          <router-link to="/about">
-            <div class="nav-link"> About </div>
-          </router-link>
-          <router-link to="/about#skills">
-            <div class="nav-link"> Skills </div>
-          </router-link>
-          <router-link to="/about#projects">
-            <div class="nav-link"> Projects </div>
-          </router-link>
-          <router-link to="/about#contact">
-            <div class="nav-link"> Contact </div>
-          </router-link>
-        </div>
+      <div class="w-full">
 
-        <div class="social">
-          <a class="facebook" href="https://facebook.com/joey.lai" target="_blank" rel="noopener noreferrer"> <i class="fa fa-facebook"></i> </a>
-          <a class="linkedin" href="https://ca.linkedin.com/in/jlai403" target="_blank" rel="noopener noreferrer"> <i class="fa fa-linkedin"></i> </a>
-          <a class="github" href="https://github.com/jlai403" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> </a>
-          <a class="stackoverflow" href="http://stackoverflow.com/users/2060484/joey" target="_blank" rel="noopener noreferrer"> <i class="fa fa-stack-overflow"></i> </a>
-          <a class="instagram" href="https://instagram.com/_jlai/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-instagram"></i> </a>
-          <a class="twitter" href="https://twitter.com/jlai_" target="_blank" rel="noopener noreferrer"> <i class="fa fa-twitter"></i> </a>
-          <a class="google" href="https://google.com/+jlai403" target="_blank" rel="noopener noreferrer"> <i class="fa fa-google-plus"></i> </a>
-          <a class="pinterest" href="https://www.pinterest.com/jlai403/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-pinterest-p"></i> </a>
+        <div class="w-full text-[15px] mt-2 flex justify-center gap-2">
+          <a class="social-icon text-[#2c3e50] hover:text-white hover:!bg-linkedin" href="https://ca.linkedin.com/in/jlai403" target="_blank" rel="noopener noreferrer"> <i class="fa fa-linkedin"></i> </a>
+          <a class="social-icon text-[#2c3e50] hover:text-white hover:!bg-github" href="https://github.com/jlai403" target="_blank" rel="noopener noreferrer"> <i class="fa fa-github"></i> </a>
+          <a class="social-icon text-[#2c3e50] hover:text-white hover:!bg-instagram-bg" href="https://instagram.com/_jlai/" target="_blank" rel="noopener noreferrer"> <i class="fa fa-instagram"></i> </a>
         </div>
       </div>
 
@@ -42,5 +23,5 @@
 </template>
 
 <script setup lang="ts">
-import './Home.scss';
+// Replaced Home.scss with Tailwind utility classes
 </script>
