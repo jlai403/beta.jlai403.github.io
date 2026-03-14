@@ -5,7 +5,8 @@
   "type": "module",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.2.1",

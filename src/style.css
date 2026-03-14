@@ -1,42 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Open+Sans|Roboto+Condensed|Raleway|Questrial');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-alex: "Alex Brush", cursive;
-  --font-questrial: "Questrial", sans-serif;
-  --font-raleway: "Raleway", sans-serif;
-  --font-roboto: "Roboto Condensed", "Avenir", "Open Sans", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "SF Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
   
-  --color-green-primary: #00b96a;
-  --color-green-light: #c3eac7;
-  --color-navy: #354b60;
-  --color-red: #e74c3c;
-  --color-blue-bright: #00ade6;
-  --color-teal: #05e3d5;
-  --color-cyan: #43c6ac;
-  --color-light-cyan: #bdfff3;
-  --color-lightish-cyan: #e8f6f3;
+  --color-bg-primary: #ffffff;
+  --color-text-primary: #111111;
+  --color-text-secondary: #666666;
+  --color-link: #3b82f6; /* Modern Blue, more pleasing than default blue */
+  --color-link-hover: #2563eb;
 }
 
 body,
 html,
 #root {
-  @apply h-full w-full font-roboto antialiased text-[14px];
-}
-
-code {
-  @apply font-mono;
+  @apply h-full w-full font-mono bg-bg-primary text-text-primary antialiased text-[14px] leading-[22px] font-[400] tracking-[-0.1px] selection:bg-[#eeeeee];
 }
 
 a {
-  @apply no-underline bg-transparent font-normal;
+  @apply no-underline text-link italic underline decoration-1 underline-offset-4 transition-all duration-200 ease-[cubic-bezier(0.19,1,0.22,1)];
 }
 
-a:active,
-a:hover,
-a:link,
-a:visited {
-  @apply no-underline bg-transparent font-normal;
+a:hover {
+  @apply text-link-hover decoration-2;
 }
 
 @theme {
@@ -96,38 +82,14 @@ a:visited {
 .fadeIn.six { @apply animate-fade-in-6s; }
 
 
-@theme {
-  --color-facebook: #3b5998;
-  --color-linkedin: #007bb6;
-  --color-github: #333333;
-  --color-stackoverflow: #f48024;
-  --color-stackoverflow-bg: #222222;
-  --color-instagram-bg: #517fa4;
-  --color-twitter: #00aced;
-  --color-google-plus: #dd4b39;
-  --color-pinterest: #cb2027;
-}
 
-.nav-link {
-  @apply no-underline font-roboto text-[15px] !font-bold text-navy uppercase bg-transparent;
-}
-
-.nav-link:hover {
-  @apply text-red transition-colors duration-1000 ease-in no-underline;
-}
-
-.nav-link:active,
-.nav-link:link,
-.nav-link:visited {
-  @apply no-underline font-roboto text-[15px] !font-bold text-navy uppercase bg-transparent;
-}
 
 .center.text {
   @apply text-center;
 }
 
 .social-icon {
-  @apply no-underline inline-flex items-center justify-center h-[30px] w-[30px] rounded-lg mx-[2px];
+  @apply no-underline inline-flex items-center justify-center rounded-lg mx-[2px];
   transition: all 0.2s ease;
 }
 
